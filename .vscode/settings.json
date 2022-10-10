@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/08e8da50-122d-4f81-9778-40ccc76c6ae3/AppServices/subscriptions/08e8da50-122d-4f81-9778-40ccc76c6ae3/resourceGroups/ez-speaking/providers/Microsoft.Web/sites/ez-speaking",
+    "appService.deploySubpath": "."
+}
