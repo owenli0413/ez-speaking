@@ -122,4 +122,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['ez-speaking.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://ez-speaking.azurewebsites.net']
