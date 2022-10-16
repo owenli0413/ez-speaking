@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load i18n %}
+{% load django_bootstrap5 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
+{% block content %}
+
+<div class="container">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 col-md-4">
+                <h1 style="text-align: left; color:rgba(117, 19, 93, 0.73)">{% translate "Contact Us" %}</h1>
+            </div>
+            <div class="col-lg-1 col-sm-1 col-md-1">
+                <div class="d-flex" style="height: 200px; ">
+                    <div class="vr" style="width:5px; color:rgba(117, 19, 93, 0.73)"></div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-sm-1 col-md-1"></div>
+            <div class="col-lg-4 col-sm-5 col-md-5">
+                <p style="text-align: left;" class="align-middle popup">{% translate "Reach us on WeChat:" %}
+                    CanadaEZlife
+                </p>
+                <p style="text-align: left;" class="align-middle">{% translate "Send us an email:" %}
+                    info@ez-alberta.com</p>
+            </div>
+            <div class="col-lg-2 col-sm-1 col-md-1"></div>
+        </div>
+        <div class="row" id="contact_img">
+            <div class="col-sm-1 col-md-3 col-lg-6"></div>
+            <div class="col">
+                <h3 style="margin-top: 40px; margin-bottom: 40px; width: 80%; color:rgba(117, 19, 93, 0.73)">
+                    {%translate "Send us a Message" %}</h3>
+
+                <div class="container" style="width: 80%;">{% include 'system_messages.html' %}
+
+                    <form method="post" class="form">
+                        {% csrf_token %}
+                        {% bootstrap_field form.name show_label=False %}
+                        {% bootstrap_field form.email show_label=False %}
+                        {% bootstrap_field form.phone show_label=False %}
+                        {% bootstrap_field form.subject show_label=False %}
+                        {% bootstrap_field form.message show_label=False %}
+                        {% if LANGUAGE_CODE == 'en' %}
+                        {% bootstrap_button button_type="submit" content="Send Message" %}
+                        {% else %}
+                        {% bootstrap_button button_type="submit" content="发送" %}
+                        {% endif %}
+                    </form>
+                </div>
+                <h3 style="height: 50px;"></h3>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

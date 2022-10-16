@@ -1,0 +1,88 @@
+#show_bg {
+    background-image:
+      linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+      url('/static/images/student_3.jpg');
+    width: 100%;
+    height: 80%;
+    /* background-size: cover; */
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 0 3px 3px white inset;
+  }
+  
+  div.invalid-feedback {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  
+  #contact_img {
+    background-image:
+      linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+      url('/static/images/contact_2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 0 0 10px 10px white inset;
+    width: 100%;
+    height: 100%;
+  }
+
+  .popup {
+    position: relative;
+  }
+  
+  .popup div {
+    /*visiblity: hidden; */
+    
+    display: none;
+    position: absolute;
+    top: 0;
+    left:100%;
+    margin-top: -30px; /* approx adjustment for arrow */
+    margin-left: 25px; /* approx adjustment for arrow */
+  }
+  
+
+  .popup a:hover + div {
+    cursor: pointer;
+    display: block;
+    /*visibility: visible; */
+    width: 180px;
+    line-height: 20px;
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+    z-index: 999;
+    color: rgb(113, 157, 171);
+    background: rgb(255, 255, 255);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+    box-shadow: #333 -4px 4px 16px 2px;
+    -webkit-transition: opacity 100ms ease-in;
+    -o-transition: opacity 100ms ease-in;
+    -moz-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+  }
+  
+  .popup div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FFFFFF transparent transparent;
+    top: 22px;
+    left: -23px;
+  }
+  
